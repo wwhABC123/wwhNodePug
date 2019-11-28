@@ -3,6 +3,26 @@ block content
   style.
     #main{width:850px;height:600px;background-color:#00f0f0;}
   div#main
-    p
-     h1 aaaaaaaaaaaaaaaa
+    form(action='/createDB',method='post')
+      input(type='text',name='nameDB')
+      input(type='text',name='collName')
+      input(type='submit')
+    form(action='/insert',method='post')
+     p 数据库名：
+       input(type='text',name='dbName')
+     p 集合名：
+       input(type='text',name='collName')
+     p 名字：
+      input(type='text',name='name')
+     p url:
+      input(type='text',name='url')
+    
+      input(type='submit')
+    form(action='/find',method='post')
+      input(type='submit')
+    form(action='/ifFind',method='post')
+      p 条件：
+        input(type='text',name='rule')
+      input(type='submit')
+    
 
